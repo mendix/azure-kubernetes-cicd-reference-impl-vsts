@@ -1,4 +1,4 @@
-# Dockerfile for Mendix-compatile VSTS agent
+# Dockerfile for Mendix-compatible VSTS agent
 
 This Dockerfile was used to create a VSTS agent with support for Docker-in-Docker and Subversion.
 It is dervied from the vsts-agent Docker images provided by Microsoft (microsoft/vsts-agent).
