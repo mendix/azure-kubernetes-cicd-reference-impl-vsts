@@ -63,3 +63,11 @@ Create namespace mendixapps:
 ```
 kubectl create namespace mendixapps
 ```
+Shell Script to download Mendix Docker Build Pack (part of build pipeline)
+
+```
+wget https://github.com/mendix/docker-mendix-buildpack/archive/master.zip
+unzip master.zip
+mv  docker-mendix-buildpack-master/* .
+rm -R  docker-mendix-buildpack-master
+```
