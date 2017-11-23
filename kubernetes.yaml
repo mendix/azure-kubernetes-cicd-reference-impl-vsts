@@ -1,0 +1,66 @@
+---
+apiVersion: "v1"
+kind: "List"
+items:
+
+  - apiVersion: v1
+    kind: "Namespace"
+    metadata:
+      name: "#{mendix.namespace}#"
+      labels:
+        name: "#{mendix.namespace}#"
+
+  - apiVersion: apps/v1beta1
+    kind: "Deployment"
+    metadata:
+      name: #{mendix.appname}#-deployment
+      namespace: #{mendix.namespace}#
+    spec:
+      replicas: 1 # tells deployment to run 1 pod matching the template
+      template: # create pods using pod definition in this template
+        metadata:
+          labels:
+            app: "#{mendix.appname}#"
+        spec:
+          imagePullSecrets:
+              - name: azurecontainerreg
+          containers:
+          - name: mendixapp
+            image: #{acrName}#/mendix/#{mendix.appname}#:#{Build.BuildNumber}#
+            ports:
+            - containerPort: 80
+            env:
+              - name: DATABASE_ENDPOINT
+                value: "#{mendix.DATABASE_ENDPOINT}#"
+              - name: ADMIN_PASSWORD
+                value: "#{mendix.ADMIN_PASSWORD}#"
+              - name: LICENSE_ID
+                value: "#{mendix.LICENSE_ID}#"
+              - name: LICENSE_KEY
+                value: "#{mendix.LICENSE_KEY}#"
+              - name: MXRUNTIME_com_mendix_core_StorageService
+                value: "com.mendix.storage.azure"
+              - name: MXRUNTIME_com_mendix_storage_azure_AccountName
+                value: "#{mendix.MXRUNTIME_com_mendix_storage_azure_AccountName}#"
+              - name: MXRUNTIME_com_mendix_storage_azure_AccountKey
+                value: "#{mendix.MXRUNTIME_com_mendix_storage_azure_AccountKey}#"
+              - name: MXRUNTIME_com_mendix_storage_azure_Container
+                value: "#{mendix.MXRUNTIME_com_mendix_storage_azure_Container}#"
+  - apiVersion: "v1"
+    kind: "Service"
+    metadata:
+      name: "#{mendix.appname}#"
+      namespace: "#{mendix.namespace}#"
+      labels:
+        app: "#{mendix.appname}#"
+    spec:
+      type: "LoadBalancer"
+      selector:
+        app: "#{mendix.appname}#"
+      ports:
+      - port: 80
+
+
+
+
+
