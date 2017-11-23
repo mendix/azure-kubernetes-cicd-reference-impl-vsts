@@ -97,3 +97,9 @@ Change context of kubectl to namespace mendixapps:
 ```
 kubectl config set-context $(kubectl config current-context) --namespace=mendixapps
 ```
+
+Location of Kubernetes manifest for kubectl apply command argument:
+
+```
+$(System.DefaultWorkingDirectory)/Mendix Company Expenses Build Pipeline/Kubernetes_Config_$(Build.SourceBranch)_$(Build.SourceVersion)_$(Build.BuildNumber)/kubernetes.yaml
+```
