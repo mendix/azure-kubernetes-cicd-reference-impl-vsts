@@ -71,3 +71,23 @@ unzip master.zip
 mv  docker-mendix-buildpack-master/* .
 rm -R  docker-mendix-buildpack-master
 ```
+
+Build Arguments (during Build Docker Image step of Build Pipeline
+```
+BUILD_PATH=trunk
+```
+
+Additional Image Tags (during Build Docker Image and Push Docker Image steps of Build Pipeline
+```
+$(Build.BuildNumber)
+```
+
+Artifact name during Publish Build Artifacts (build pipeline)
+```
+Kubernetes_Config_$(Build.SourceBranch)_$(Build.SourceVersion)_$(Build.BuildNumber)
+```
+
+Root Directory of Replace Tokens step in Release pipeline
+```
+$(System.DefaultWorkingDirectory)/Mendix Company Expenses Build Pipeline/Kubernetes_Config_$(Build.SourceBranch)_$(Build.SourceVersion)_$(Build.BuildNumber)/
+```
