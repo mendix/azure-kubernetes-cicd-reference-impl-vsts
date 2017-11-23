@@ -16,36 +16,50 @@ Video will follow
 
 This section lists the commands used during the video how-to for easy copy-pasting:
 
-Become root on the shell
-```
-sudo -i
-```
-
-Check version of the Azure CLI
+Check version of the Azure CLI:
 
 ```
 az --version
 ```
-Login to Azure
+Login to Azure:
 
 ```
 az login
 ```
 
-Set feature flag to enable AKS preview
+Set feature flag to enable AKS preview:
 
 ```
 az provider register -n Microsoft.ContainerService
 ```
 
-Create a Resource Group
+Create a Resource Group:
 
 ```
 az group create --name mx-cicd-ref-impl --location centralus
 ```
 
-Create AKS Cluster
+Create AKS Cluster:
 
 ```
 az aks create --resource-group mx-cicd-ref-impl --name mx-cicd-ref-impl-cluster --node-count 1 --generate-ssh-keys
+```
+Install local Kubernetes Command-Line client:
+```
+az aks install-cli
+```
+Retrieve cluster credentials:
+```
+az aks get-credentials --resource-group mx-cicd-ref-impl --name mx-cicd-ref-impl-cluster
+```
+
+Create tunnel to access Kubernetes Dashobard:
+```
+az aks browse --resource-group mx-cicd-ref-impl --name mx-cicd-ref-impl-cluster
+```
+
+Create namespace mendixapps:
+
+```
+kubectl create namespace mendixapps
 ```
