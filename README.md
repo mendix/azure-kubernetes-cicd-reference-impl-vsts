@@ -87,11 +87,6 @@ Artifact name during Publish Build Artifacts (build pipeline)
 Kubernetes_Config_$(Build.SourceBranch)_$(Build.SourceVersion)_$(Build.BuildNumber)
 ```
 
-Root Directory of Replace Tokens step in Release pipeline
-```
-$(System.DefaultWorkingDirectory)/Mendix Company Expenses Build Pipeline/Kubernetes_Config_$(Build.SourceBranch)_$(Build.SourceVersion)_$(Build.BuildNumber)/
-```
-
 Change context of kubectl to namespace mendixapps:
 
 ```
