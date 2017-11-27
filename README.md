@@ -6,7 +6,7 @@ The Mendix Azure-VSTS-Kubernetes CI/CD Reference Implementation is a reference i
 
 # Video tutorial
 
-[![Deploy your own Kubernetes-based Mendix cluster on Microsoft Azure](http://img.youtube.com/vi/mzQir1b5c78/0.jpg)](http://www.youtube.com/watch?v=mzQir1b5c78 "Deploy your own Kubernetes-based Mendix cluster on Microsoft Azure")
+[![Deploy your own Kubernetes-based Mendix cluster on Microsoft Azure](http://img.youtube.com/vi/uDaMPPy9Wa/0.jpg)](http://www.youtube.com/watch?v=uDaMPPy9Wa "Deploy your own Kubernetes-based Mendix cluster on Microsoft Azure")
 
 # Scope of the Reference Implementation
 
