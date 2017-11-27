@@ -6,11 +6,15 @@ The Mendix Azure-VSTS-Kubernetes CI/CD Reference Implementation is a reference i
 
 # Video how-to
 
-Video will follow
+Video will follow.
 
 # Scope of the Reference Implementation
 
+![Scope of the Reference Implementation](/images/scope_r.png)
+
 # Technical Architecture of the Reference Implementation
+
+![Technical Architecture of the Reference Implementation](/images/arch_r.png)
 
 # Commands used in video how-to
 
@@ -98,3 +102,7 @@ Location of Kubernetes manifest for kubectl apply command argument (substitute l
 ```
 Kubernetes_Config_$(Build.SourceBranch)_$(Build.SourceVersion)_$(Build.BuildNumber)/kubernetes.yaml
 ```
+
+# Questions / Feedback / Suggestions / Contributions
+
+Please open an issue or submit a pull request against this repository to provide your input.
