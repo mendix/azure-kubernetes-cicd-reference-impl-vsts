@@ -4,9 +4,9 @@ The Mendix Azure-VSTS-Kubernetes CI/CD Reference Implementation is a reference i
 
 **We also have a Reference Implementation available using Jenkins as CI/CD platform. This implementation is described [here](https://github.com/MXClyde/azure-kubernetes-cicd-reference-impl-jenkins/)**
 
-# Video how-to
+# Video tutorial
 
-Video will follow.
+[![Deploy your own Kubernetes tutorial](https://img.youtube.com/vi/mzQir1b5c78/0.jpg)](https://www.youtube.com/watch?v=mzQir1b5c78)
 
 # Scope of the Reference Implementation
 
