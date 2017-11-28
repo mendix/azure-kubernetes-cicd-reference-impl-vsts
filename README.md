@@ -16,9 +16,9 @@ The Mendix Azure-VSTS-Kubernetes CI/CD Reference Implementation is a reference i
 
 ![Technical Architecture of the Reference Implementation](/images/arch_r.png)
 
-# Commands used in video how-to
+# Commands used in video tutorial
 
-This section lists the commands used during the video how-to for easy copy-pasting:
+This section lists the commands used during the video to facilitate easy copy-pasting:
 
 Check version of the Azure CLI:
 
