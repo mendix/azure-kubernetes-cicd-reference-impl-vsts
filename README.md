@@ -57,7 +57,7 @@ Retrieve cluster credentials:
 az aks get-credentials --resource-group mx-cicd-ref-impl --name mx-cicd-ref-impl-cluster
 ```
 
-Create tunnel to access Kubernetes Dashobard:
+Create tunnel to access Kubernetes Dasboard:
 ```
 az aks browse --resource-group mx-cicd-ref-impl --name mx-cicd-ref-impl-cluster
 ```
