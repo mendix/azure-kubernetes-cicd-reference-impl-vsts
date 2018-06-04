@@ -202,7 +202,7 @@
         "settings": {
 					"compose": {
 						"vstsagent": {
-						"image": "mxclyde/vstsagent",
+						"image": "microsoft/vsts-agent",
 						"volumes": [
 							"/var/run/docker.sock:/var/run/docker.sock"
 							],
@@ -212,36 +212,10 @@
 							"[concat('VSTS_ACCOUNT=', parameters('vstsAccount'))]"
 							],
 						"restart": "always"
-							},
-						"vstsagent2": {
-						"image": "mxclyde/vstsagent",
-							"volumes": [
-							"/var/run/docker.sock:/var/run/docker.sock"
-							],
-							"environment": [
-								"[concat('VSTS_TOKEN=', parameters('vstsToken'))]",
-								"[concat('VSTS_POOL=', parameters('vstsPool'))]",
-								"[concat('VSTS_ACCOUNT=', parameters('vstsAccount'))]"
-							],
-						"restart": "always"
-						},
-						"vstsagent3": {
-							"image": "mxclyde/vstsagent",
-							"volumes": [
-							"/var/run/docker.sock:/var/run/docker.sock"
-						],
-							"environment": [
-							"[concat('VSTS_TOKEN=', parameters('vstsToken'))]",
-							"[concat('VSTS_POOL=', parameters('vstsPool'))]",
-							"[concat('VSTS_ACCOUNT=', parameters('vstsAccount'))]"
-							],
-							"restart": "always"
-						}
+							}
 					}
 				}
       }
     }
   ]
 }
-
-
