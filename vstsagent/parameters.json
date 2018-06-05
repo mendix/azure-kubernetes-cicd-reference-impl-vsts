@@ -1,27 +1,57 @@
 {
-  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {
-    "newStorageAccountName": {
-      "value": "vstsagent"
-    },
-    "adminUsername": {
-      "value": "ubuntu"
-    },
-    "adminPassword": {
-      "value": ""
-    },
-    "dnsNameForPublicIP": {
-      "value": "vstsagent"
-    },
-      "vstsToken": {
-      "value": ""
-    },
-    "vstsAccount": {
-      "value": ""
-    },
-    "vstsPool": {
-      "value": "Default"
-    }
-  }
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "westeurope"
+        },
+        "virtualMachineName": {
+            "value": "vstsagenthost"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B2s"
+        },
+        "adminUsername": {
+            "value": "azureuser"
+        },
+        "virtualNetworkName": {
+            "value": "vstsagenthost-vnet"
+        },
+        "networkInterfaceName": {
+            "value": "vstsagenthost291"
+        },
+        "networkSecurityGroupName": {
+            "value": "vstsagenthost-nsg"
+        },
+        "adminPublicKey": {
+            "value": ""
+        },
+        "addressPrefix": {
+            "value": "172.16.0.0/24"
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "subnetPrefix": {
+            "value": "172.16.0.0/24"
+        },
+        "publicIpAddressName": {
+            "value": "vstsagenthost-pip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+	    "vstsToken": {
+        "value": ""
+        },
+        "vstsAccount": {
+        "value": ""
+		},
+        "vstsPool": {
+		"value": "Default"
+		}
+	}
 }
