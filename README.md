@@ -1,5 +1,7 @@
 #  Mendix Azure-VSTS-Kubernetes CI/CD Reference Implementation
 
+# UPDATE: This Reference Implementation is outdated and deprecated. An actively maintained, fully-featured, up-to-date reference implementation for running Mendix on Azure can be found here: https://github.com/mxclyde/mendix-kubernetes-azure 
+
 The Mendix Azure-VSTS-Kubernetes CI/CD Reference Implementation is a reference implementation for running a cluster of Mendix runtime instances by setting up a managed Kubernetes cluster on Azure. The Kubernetes cluster will use Docker containers built using the [Mendix Docker buildpack](https://github.com/mendix/docker-mendix-buildpack). The build and deployment of containers on the cluster is orchestrated using Microsoft Visual Studio Team Services.
 
 **We also have a Reference Implementation available using Jenkins as CI/CD platform. This implementation is described [here](https://github.com/MXClyde/azure-kubernetes-cicd-reference-impl-jenkins/)**
@@ -7,8 +9,6 @@ The Mendix Azure-VSTS-Kubernetes CI/CD Reference Implementation is a reference i
 # Video tutorial
 
 [![Deploy your own Kubernetes-based Mendix cluster on Microsoft Azure](images/youtube.png)](http://www.youtube.com/watch?v=B-heaZe7-6I "Deploy your own Kubernetes-based Mendix cluster on Microsoft Azure")
-
-**UPDATE 06/2018: This tutorial covers a very simple Mendix configuration on top of Kubernetes to showcase the concept. Many advanced Mendix features are not covered (e.g. horizontal scaling, debugging, Datadog monitoring, health-checks, configmaps usage). Also subsequent improvements to the Build and Release pipelines (removal of dependence on a private VSTS agent, use of VSTS Git repository o store manifest temmplates and cleaner, shorter, more streamlined pipelines) are not included in this older version. Mendix customers who want to deploy this in a production environment are encouraged to contact the author (clyde.waal@mendix.com) to receive the latest advanced templates.**
 
 # Scope of the Reference Implementation
 
