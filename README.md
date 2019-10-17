@@ -1,1 +1,1 @@
-# UPDATE: This Reference Implementation is outdated and deprecated. An up-to-date, unsupported reference implementation for running Mendix on Azure can be found here: https://github.com/mxclyde/mendix-kubernetes-azure 
+# This Reference Implementation is outdated and deprecated. An up-to-date, unsupported reference implementation for running Mendix on Azure can be found here: https://github.com/mxclyde/mendix-kubernetes-azure 
